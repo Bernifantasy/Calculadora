@@ -9,9 +9,9 @@
     <meta name="keywords" content="html,cheatsheet" />
     <meta property="fb:admins" content="YourFacebookUsername" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="../styles/styles_cs.css">
+    <link rel="stylesheet" href="../styles/style_cs.css">
 <!-- Prepare for second course --> 
-    <script src="script_cs.js"></script>
+    <script src="../js/script_cs.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
 <!-- If we use bootstrap
 
@@ -55,7 +55,7 @@
                 <td><button type="button" onclick="Tractar_Quatre()">4</button></td>
                 <td><button type="button" onclick="Tractar_Cinc()">5</button></td>
                 <td><button type="button" onclick="Tractar_Sis()">6</button></td>
-                <td><button type="button" id="sumar" class="operacio" onclick="Sumar()">+</button></td>
+                <td rowspan="2"><button type="button" id="sumar" class="operacio" onclick="Sumar()">+</button></td>
             </tr>
             <tr>
                 <td><button type="button" onclick="Tractar_Un()">1</button></td>
@@ -65,7 +65,7 @@
             <tr>
                 <td><button type="button" onclick="Tractar_Zero()">0</button></td>
                 <td><button type="button">,</button></td>
-                <td><button type="button" id="igual" class="operacio" onclick="Igual()">=</button></td>
+                <td colspan="2"><button type="button" id="igual" class="operacio" onclick="Igual()">=</button></td>
             </tr>
         </table>
     </form>

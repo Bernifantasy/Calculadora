@@ -25,9 +25,10 @@ body
 
 #calculadora button, #calculadora input
 {
+    box-sizing: border-box;
     width: 100%;
     height: 100%;
-    font-size: 1em;
+    font-size: 12px;
     padding: 10px;
 }
 
@@ -36,12 +37,12 @@ body
     padding: 15px;
     color: white;
     border: none;
-    background-color: rgba(0, 0, 0, 5);
+    background-color: rgb(88, 82, 82);
 }
 
 #calculadora button
 {
-    background-color: rgba(0, 0, 0, 4);
+    background-color: grey;
     border: none;
     color: white;
     font-weight: bold;
@@ -50,11 +51,14 @@ body
 
 #calculadora button:hover
 {
-    background-color: rgba(0, 0, 0, 5);
+    background-color: black;
 }
 
 #calculadora button.operacio{
-    background-color: crimson;
+    background-color: red;
+}
+#calculadora button.operacio:hover{
+    background-color: rgb(170, 56, 56);
 }
 
 #menu {
@@ -76,6 +80,5 @@ body
     text-decoration: none;
     color: black;
     font-weight: 600;
-
 }
 

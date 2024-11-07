@@ -4,7 +4,12 @@ let operador="";
 let errorMsg="";
 const Max_Llargada=5;
 
-    document.addEventListener("DOMContentLoaded", function () {
+function mostrarPantalla()
+{
+    document.getElementById("pantallaresultat").value=operand1 + operador + operand2;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     operand1 = "0";
     document.getElementById("pantallaresultat").value = operand1;
   });
@@ -20,7 +25,6 @@ function Comprovar_Operand(operand)
     }
 
 }
-
 
 function Tractar_Un()
 {
@@ -231,3 +235,91 @@ function Tractar_Zero()
         pantalla_info.value = errorMsg;
     }
 }
+
+function Clear()
+{
+    operand1="";
+    operand2="";
+    operador="";
+    document.getElementById("pantallaresultat").value="";
+    document.getElementById("pantallainfo").value="";
+}
+
+function Sumar()
+{
+    if(operand1 !== "" && operador ==="")
+    {
+        operador="+";
+        mostrarPantalla();
+    }else if(operand1 !=="" && operand2 !== "")
+    {
+        Igual();
+        operador="+";
+    }
+}
+
+function Restar()
+{
+    if(operand1 !== "" && operador ==="")
+        {
+            operador="-";
+            mostrarPantalla();
+        }else if(operand1 !=="" && operand2 !== "")
+        {
+            Igual();
+            operador="-";
+        }
+
+}
+
+function Multiplicar()
+{
+    if(operand1 !== "" && operador ==="")
+        {
+            operador="*";
+            mostrarPantalla();
+        }else if(operand1 !=="" && operand2 !== "")
+        {
+            Igual();
+            operador="*";
+        }
+
+}
+
+function Dividir()
+{
+    if(operand1 !== "" && operador ==="")
+        {
+            operador="/";
+            mostrarPantalla();
+        }else if(operand1 !=="" && operand2 !== "")
+        {
+            Igual();
+            operador="/";
+        }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
