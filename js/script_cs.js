@@ -3,6 +3,7 @@ let operand2="";
 let operador="";
 let errorMsg="";
 const Max_Llargada=5;
+const Separador_Decimal=".";
 
 function mostrarPantalla()
 {
@@ -26,213 +27,432 @@ function Comprovar_Operand(operand)
 
 }
 
+
 function Tractar_Un()
 {
-    operand1 += "1";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";  
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "1";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "1";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
 
+
 function Tractar_Dos()
 {
-    operand1 += "2";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";  
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "2";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "2";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
 
 function Tractar_Tres()
 {
-    operand1 += "3";
+    if (operand1 === "0" && operador === "") {
+        operand1 = ""; 
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "3";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "3";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
+
 
 function Tractar_Quatre()
 {
-    operand1 += "4";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";  
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "4";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "4";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
+
 
 function Tractar_Cinc()
 {
-    operand1 += "5";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "5";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "5";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
+
 
 function Tractar_Sis()
 {
-    operand1 += "6";
+    if (operand1 === "0" && operador === "") {
+        operand1 = ""; 
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "6";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "6";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
+
 
 function Tractar_Set()
 {
-    operand1 += "7";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";  
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "7";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "7";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
 
+
 function Tractar_Vuit()
 {
-    operand1 += "8";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "8";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "8";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
 
 function Tractar_Nou()
 {
-    operand1 += "9";
+    if (operand1 === "0" && operador === "") {
+        operand1 = ""; 
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "9";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "9";
+            } 
+    }
+    
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
-    }
-    else
-    {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
 
 function Tractar_Zero()
 {
-    operand1 += "0";
+    if (operand1 === "0" && operador === "") {
+        operand1 = "";
+    }
+    if(operador==="")
+    {
+        if(operand1.length<Max_Llargada)
+        {
+            operand1 += "0";
+        }        
+    }else{
+        if(operand2.length<Max_Llargada)
+            {
+                operand2 += "0";
+            } 
+    }
     let pantalla = document.getElementById("pantallaresultat");
     let pantalla_info = document.getElementById("pantallainfo");
 
-    let [error, errorMsg]=Comprovar_Operand(operand1);
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
-    if(error===0)
-    {
-        pantalla.value = operand1;
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
         pantalla_info.value = "";
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
-    else
+}
+
+function Tractar_Coma()
+{
+    if(operador==="")
     {
-        operand1 = operand1.substring(0, operand1.length - 1);
-        console.log("error desfem operand1" + operand1);
-        pantalla_info.value = errorMsg;
+        if(!operand1.includes(Separador_Decimal))
+        {
+            operand1+=Separador_Decimal;
+        }
+    }else{
+        if(!operand2.includes(Separador_Decimal))
+        {
+            operand2+=Separador_Decimal;
+        }
+    }
+
+    let pantalla = document.getElementById("pantallaresultat");
+    let pantalla_info = document.getElementById("pantallainfo");
+
+    let [error1, errorMsg1]=Comprovar_Operand(operand1);
+    let [error2, errorMsg2]=Comprovar_Operand(operand2);
+
+    if (error1 === 0 && error2 === 0) {
+        pantalla.value = operand1 + operador + operand2;
+        pantalla_info.value = "";
+    } else {
+        if (error1 !== 0) {
+            operand1 = operand1.substring(0, operand1.length - 1);
+            pantalla_info.value = errorMsg1;
+        } else if (error2 !== 0) {
+            operand2 = operand2.substring(0, operand2.length - 1);
+            pantalla_info.value = errorMsg2;
+        }
     }
 }
 
@@ -241,17 +461,17 @@ function Clear()
     operand1="";
     operand2="";
     operador="";
-    document.getElementById("pantallaresultat").value="";
+    document.getElementById("pantallaresultat").value="0";
     document.getElementById("pantallainfo").value="";
 }
 
 function Sumar()
 {
-    if(operand1 !== "" && operador ==="")
+    if(operand1 !== "" && operador ==="" && operand2 === "")
     {
         operador="+";
         mostrarPantalla();
-    }else if(operand1 !=="" && operand2 !== "")
+    }else if(operand1 !=="" && operador !== "" && operand2 !== "")
     {
         Igual();
         operador="+";
@@ -260,11 +480,11 @@ function Sumar()
 
 function Restar()
 {
-    if(operand1 !== "" && operador ==="")
+    if(operand1 !== "" && operador ==="" && operand2 === "")
         {
             operador="-";
             mostrarPantalla();
-        }else if(operand1 !=="" && operand2 !== "")
+        }else if(operand1 !=="" && operador !== "" && operand2 !== "")
         {
             Igual();
             operador="-";
@@ -274,11 +494,11 @@ function Restar()
 
 function Multiplicar()
 {
-    if(operand1 !== "" && operador ==="")
+    if(operand1 !== "" && operador ==="" && operand2 === "")
         {
             operador="*";
             mostrarPantalla();
-        }else if(operand1 !=="" && operand2 !== "")
+        }else if(operand1 !=="" && operador !== "" && operand2 !== "")
         {
             Igual();
             operador="*";
@@ -288,11 +508,11 @@ function Multiplicar()
 
 function Dividir()
 {
-    if(operand1 !== "" && operador ==="")
+    if(operand1 !== "" && operador ==="" && operand2 === "")
         {
             operador="/";
             mostrarPantalla();
-        }else if(operand1 !=="" && operand2 !== "")
+        }else if(operand1 !=="" && operador !== "" && operand2 !== "") 
         {
             Igual();
             operador="/";
@@ -301,7 +521,43 @@ function Dividir()
 }
 
 
+function Igual()
+{
+    if(operand1 !=="" && operador!=="" && operand2!=="")
+    {
+        let resultat;
+        const num1= parseFloat(operand1);
+        const num2=parseFloat(operand2);
 
+        switch(operador)
+        {
+            case"+":
+                resultat= num1+num2;
+                break;
+            case"-":
+                resultat=num1-num2;
+                break;
+            case"*":
+                resultat=num1*num2;
+                break;
+            case"/":
+                if(num2!==0)    
+                {
+                    resultat=num1/num2;
+                }
+                else{
+                    resultat="Error"
+                }
+                break;
+        }
+        operand1=resultat.toString();
+        document.getElementById("pantallaresultat").value=operand1;
+        operador="";
+        operand1="";
+        operand2="";
+
+    }
+}
 
 
 
