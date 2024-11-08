@@ -48,6 +48,9 @@ body{
 }
 
 .submit-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     height: 60px;
     font-size: 17px;
@@ -58,7 +61,7 @@ body{
     margin: 0;
 }
 
-.submit-button a{
+.input-submit a{
     color: white;
     text-decoration: none;
 }
