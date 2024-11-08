@@ -47,7 +47,6 @@ function Tractar_Un()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -55,14 +54,11 @@ function Tractar_Un()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -87,7 +83,6 @@ function Tractar_Dos()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -95,14 +90,11 @@ function Tractar_Dos()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -126,22 +118,18 @@ function Tractar_Tres()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
-
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
-    } else {
+        } 
+        else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -166,7 +154,6 @@ function Tractar_Quatre()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -174,14 +161,11 @@ function Tractar_Quatre()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -206,7 +190,6 @@ function Tractar_Cinc()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -214,14 +197,11 @@ function Tractar_Cinc()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -246,7 +226,6 @@ function Tractar_Sis()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -254,14 +233,11 @@ function Tractar_Sis()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -286,7 +262,6 @@ function Tractar_Set()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -294,14 +269,11 @@ function Tractar_Set()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -326,7 +298,6 @@ function Tractar_Vuit()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -334,14 +305,11 @@ function Tractar_Vuit()
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -365,21 +333,17 @@ function Tractar_Nou()
     }
     
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -402,21 +366,17 @@ function Tractar_Zero()
             } 
     }
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -437,21 +397,17 @@ function Tractar_Coma()
     }
 
     let pantalla = document.getElementById("pantallaresultat");
-    let pantalla_info = document.getElementById("pantallainfo");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
     if (error1 === 0 && error2 === 0) {
         pantalla.value = operand1 + operador + operand2;
-        pantalla_info.value = "";
     } else {
         if (error1 !== 0) {
             operand1 = operand1.substring(0, operand1.length - 1);
-            pantalla_info.value = errorMsg1;
         } else if (error2 !== 0) {
             operand2 = operand2.substring(0, operand2.length - 1);
-            pantalla_info.value = errorMsg2;
         }
     }
 }
@@ -462,7 +418,6 @@ function Clear()
     operand2="";
     operador="";
     document.getElementById("pantallaresultat").value="0";
-    document.getElementById("pantallainfo").value="";
 }
 
 function Sumar()
