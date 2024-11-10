@@ -513,3 +513,66 @@ function Esborrar_un()
 
     pantalla.value = pantalla.value.slice(0,-1);
 }
+
+
+
+function Calcular_Seno() {
+    let pantalla=document.getElementById("pantallaresultat");
+    if (operand1 !== "") {
+        operand1 = Math.sin(parseFloat(operand1)).toString();
+        pantalla.value= operand1;
+    }
+}
+
+function Calcular_Coseno() {
+    let pantalla=document.getElementById("pantallaresultat");
+    if (operand1 !== "") {
+        operand1 = Math.cos(parseFloat(operand1)).toString();
+        pantalla.value= operand1;
+    }
+}
+
+function Calcular_Tangente() {
+    let pantalla=document.getElementById("pantallaresultat");
+    if (operand1 !== "") {
+        operand1 = Math.tan(parseFloat(operand1)).toString();
+        pantalla.value= operand1;
+    }
+}
+
+function Calcular_Raiz() {
+    let pantalla=document.getElementById("pantallaresultat");
+    if (operand1 !== "") {
+        operand1 = Math.sqrt(parseFloat(operand1)).toString();
+        pantalla.value= operand1;
+    }
+}
+
+function Calcular_Log() {
+    let pantalla=document.getElementById("pantallaresultat");
+    if (operand1 !== "") {
+        operand1 = Math.log10(parseFloat(operand1)).toString();
+        pantalla.value= operand1;
+    }
+}
+
+
+function memoryAdd() {
+    let currentValue = document.getElementById("pantallaresultat").value;
+    
+    sessionStorage.setItem("memory", currentValue);
+}
+
+function memoryRecall() {
+    let memoryValue = sessionStorage.getItem("memory");
+
+    if (memoryValue !== null) {
+        document.getElementById("pantallaresultat").value = memoryValue;
+    } else {
+        alert("No hay ningún número guardado en memoria.");
+    }
+}
+
+function memoryClear() {
+    sessionStorage.removeItem("memory");
+}
