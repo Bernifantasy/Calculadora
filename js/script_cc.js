@@ -4,11 +4,11 @@ let operador="";
 let errorMsg="";
 const Max_Llargada=5;
 const Separador_Decimal=".";
-const pantalla=document.getElementById("pantallaresultat")
+
 
 function mostrarPantalla()
 {
-    document.getElementById("pantallaresultat").value=operand1 + operador + operand2;
+    pantalla.value=operand1 + operador + operand2;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -28,6 +28,7 @@ function Comprovar_Operand(operand)
 
 }
 
+
 function Tractar_Un()
 {
     if (operand1 === "0" && operador === "") {
@@ -45,8 +46,7 @@ function Tractar_Un()
                 operand2 += "1";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -81,6 +81,7 @@ function Tractar_Dos()
                 operand2 += "2";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -114,6 +115,8 @@ function Tractar_Tres()
                 operand2 += "3";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
+
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
@@ -149,6 +152,7 @@ function Tractar_Quatre()
             } 
     }
 
+    let pantalla=document.getElementById("pantallaresultat");
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
@@ -182,6 +186,7 @@ function Tractar_Cinc()
                 operand2 += "5";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
     
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -216,6 +221,7 @@ function Tractar_Sis()
                 operand2 += "6";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -250,6 +256,7 @@ function Tractar_Set()
                 operand2 += "7";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -284,6 +291,7 @@ function Tractar_Vuit()
                 operand2 += "8";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -317,6 +325,7 @@ function Tractar_Nou()
                 operand2 += "9";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -349,6 +358,7 @@ function Tractar_Zero()
                 operand2 += "0";
             } 
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -378,6 +388,7 @@ function Tractar_Coma()
             operand2+=Separador_Decimal;
         }
     }
+    let pantalla=document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -392,8 +403,6 @@ function Tractar_Coma()
         }
     }
 }
-
-
 
 function Clear()
 {
@@ -461,6 +470,7 @@ function Dividir()
 
 function Igual()
 {
+    let pantalla=document.getElementById("pantallaresultat");
     if(operand1 !=="" && operador!=="" && operand2!=="")
     {
         let resultat;
@@ -489,7 +499,7 @@ function Igual()
                 break;
         }
         operand1=resultat.toString();
-        document.getElementById("pantallaresultat").value=operand1;
+        pantalla.value=operand1;
         operador="";
         operand1="";
         operand2="";
@@ -499,31 +509,7 @@ function Igual()
 
 function Esborrar_un()
 {
+    let pantalla=document.getElementById("pantallaresultat");
 
-}
-
-
-function Calcular_Seno() {
-    operand1 = Math.sin(parseFloat(operand1)).toString();
-    mostrarPantalla();
-}
-
-function Calcular_Coseno() {
-    operand1 = Math.cos(parseFloat(operand1)).toString();
-    mostrarPantalla();
-}
-
-function Calcular_Tangente() {
-    operand1 = Math.tan(parseFloat(operand1)).toString();
-    mostrarPantalla();
-}
-
-function Calcular_Log() {
-    operand1 = Math.log10(parseFloat(operand1)).toString();
-    mostrarPantalla();
-}
-
-function Calcular_Raiz() {
-    operand1 = Math.sqrt(parseFloat(operand1)).toString();
-    mostrarPantalla();
+    pantalla.value = pantalla.value.slice(0,-1);
 }
