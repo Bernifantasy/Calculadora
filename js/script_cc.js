@@ -580,10 +580,24 @@ function memoryClear() {
 
 
 function goBack() {
-    window.history.back();  // Retrocede a la página anterior
+    window.history.back(); 
 }
 
-// Función para avanzar en el historial
+
 function goForward() {
-    window.history.forward();  // Avanza a la siguiente página en el historial
+    window.history.forward();  
 }
+
+document.getElementById('browser').textContent = navigator.appName;
+document.getElementById('browserVersion').textContent = navigator.appVersion;
+
+
+document.getElementById('os').textContent = navigator.platform;
+
+
+document.getElementById('lastModified').textContent = document.lastModified;
+
+
+document.getElementById('language').textContent = navigator.language;
+
+document.getElementById('hostname').textContent = window.location.href;
