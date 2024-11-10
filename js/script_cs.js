@@ -4,6 +4,7 @@ let operador="";
 let errorMsg="";
 const Max_Llargada=5;
 const Separador_Decimal=".";
+const pantalla=document.getElementById("pantallaresultat")
 
 function mostrarPantalla()
 {
@@ -81,8 +82,6 @@ function Tractar_Dos()
                 operand2 += "2";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -116,8 +115,6 @@ function Tractar_Tres()
                 operand2 += "3";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
@@ -152,8 +149,6 @@ function Tractar_Quatre()
                 operand2 += "4";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -189,8 +184,6 @@ function Tractar_Cinc()
             } 
     }
     
-    let pantalla = document.getElementById("pantallaresultat");
-
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
 
@@ -224,8 +217,6 @@ function Tractar_Sis()
                 operand2 += "6";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -260,8 +251,6 @@ function Tractar_Set()
                 operand2 += "7";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -296,8 +285,6 @@ function Tractar_Vuit()
                 operand2 += "8";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -331,8 +318,6 @@ function Tractar_Nou()
                 operand2 += "9";
             } 
     }
-    
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -365,7 +350,6 @@ function Tractar_Zero()
                 operand2 += "0";
             } 
     }
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -395,8 +379,6 @@ function Tractar_Coma()
             operand2+=Separador_Decimal;
         }
     }
-
-    let pantalla = document.getElementById("pantallaresultat");
 
     let [error1, errorMsg1]=Comprovar_Operand(operand1);
     let [error2, errorMsg2]=Comprovar_Operand(operand2);
@@ -514,23 +496,9 @@ function Igual()
     }
 }
 
+function Esborrar_un()
+{
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
