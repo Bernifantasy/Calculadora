@@ -578,15 +578,12 @@ function memoryClear() {
 }
 
 
-window.onload = function() {
-    // Recuperar el nombre del usuario y tipo de calculadora desde localStorage
-    const userName = localStorage.getItem("userName");
-    const calculatorType = localStorage.getItem("calculatorType");
 
-    // Mostrar el nombre del usuario y tipo de calculadora
-    if (userName && calculatorType) {
-        alert("Hola " + userName + "! Estás usando una calculadora " + calculatorType + ".");
-    } else {
-        alert("No se encontraron datos de usuario.");
-    }
+function goBack() {
+    window.history.back();  // Retrocede a la página anterior
+}
+
+// Función para avanzar en el historial
+function goForward() {
+    window.history.forward();  // Avanza a la siguiente página en el historial
 }

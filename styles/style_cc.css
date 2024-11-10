@@ -83,3 +83,16 @@ body {
     color: black;
     font-weight: 600;
 }
+
+.boto_historial {
+    background-color: grey; 
+    border: none; 
+    color: white; 
+    font-size: 18px; 
+    font-weight: bold;
+    width: 30px;
+    height: 30px; 
+    margin: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
