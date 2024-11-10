@@ -66,3 +66,22 @@ body{
     text-decoration: none;
 }
 
+
+.input-field {
+    width: 100%;            /* Asegura que el campo ocupe todo el ancho disponible */
+    padding: 10px;          /* Espaciado interno */
+    font-size: 16px;        /* Tamaño de la fuente */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total del ancho */
+    border: 1px solid #ccc; /* Borde suave */
+    border-radius: 4px;     /* Bordes redondeados */
+}
+
+.login-input {
+    margin-bottom: 20px;  /* Separación entre los campos */
+}
+
+.input-submit {
+    text-align: center;
+}
+
+

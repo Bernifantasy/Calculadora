@@ -31,8 +31,11 @@
             <input type="text" id="txtNom" class="input-field" required placeholder="Nom">
         </div>
         <div class="login-input">
-            <input type="text" id="txtTipus" class="input-field" required placeholder="Tipus calculadora">
-        </div>
+            <select id="txtTipus" class="input-field" required>
+                <option value="" disabled selected>Selecciona el tipus de calculadora</option>
+                <option value="simple">Simple</option>
+                <option value="cientifica">Científica</option>
+            </select>
         <div class="input-submit">
             <a href="html/calculadora_simple.html" class="submit-button">Entra</a>
         </div>
