@@ -6,18 +6,27 @@ loginForm.addEventListener("submit", (e)=>{
 
 
     if (nom && calculadora) {
-        console.log(`Usuario: ${nom}`);
-        console.log(`Tipo de calculadora: ${calculadora}`);
+        localStorage.setItem("usuario", nom);
+        localStorage.setItem("tipoCalculadora", calculadora);
 
-        console.log("Ambos campos tienen valor. Redirigiendo...");
-        // Aquí puedes redirigir a otra página dependiendo del tipo de calculadora
         if (calculadora === "simple") {
-            window.location.href = "/html/calculadora_cientifica.html";  // Redirigir a la página de calculadora simple
+            window.location.href = "../html/calculadora_cientifica.html";  // Redirigir a la página de calculadora simple
         } else if (calculadora === "cientifica") {
-            window.location.href = "/html/calculadora_cientifica.html";  // Redirigir a la página de calculadora científica
+            window.location.href = "../html/calculadora_cientifica.html";  // Redirigir a la página de calculadora científica
         }
     } else {
         alert("Por favor, completa todos los campos.");
     }
+});
 
+window.addEventListener("DOMContentLoaded", () => {
+    // Recuperar los valores guardados en localStorage
+    const usuarioGuardado = localStorage.getItem("usuario");
+    const tipoCalculadoraGuardado = localStorage.getItem("tipoCalculadora");
+
+    // Si los valores existen, ponerlos en los campos correspondientes
+    if (usuarioGuardado && tipoCalculadoraGuardado) {
+        document.querySelector("#txtNom").value = usuarioGuardado;
+        document.querySelector("#txtTipus").value = tipoCalculadoraGuardado;
+    }
 });
