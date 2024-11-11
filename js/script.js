@@ -10,9 +10,9 @@ loginForm.addEventListener("submit", (e)=>{
         localStorage.setItem("tipoCalculadora", calculadora);
 
         if (calculadora === "simple") {
-            window.location.href = "../html/calculadora_cientifica.html";  // Redirigir a la página de calculadora simple
+            window.location.href = "/html/calculadora_simple.html";  // Redirigir a la página de calculadora simple
         } else if (calculadora === "cientifica") {
-            window.location.href = "../html/calculadora_cientifica.html";  // Redirigir a la página de calculadora científica
+            window.location.href = "/html/calculadora_cientifica.html";  // Redirigir a la página de calculadora científica
         }
     } else {
         alert("Por favor, completa todos los campos.");
