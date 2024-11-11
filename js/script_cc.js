@@ -569,7 +569,7 @@ function memoryRecall() {
     if (memoryValue !== null) {
         document.getElementById("pantallaresultat").value = memoryValue;
     } else {
-        alert("No hay ningún número guardado en memoria.");
+        alert("No hi ha res en memoria.");
     }
 }
 
@@ -589,9 +589,60 @@ function goForward() {
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const fechaHoy = new Date().toLocaleDateString('es-ES'); // Formato dd/mm/yyyy
-    document.getElementById("dia").innerHTML = `Avui és dia: ${fechaHoy}`; // Agrega el texto y la fecha
+    const fechaHoy = new Date().toLocaleDateString('es-ES');
+    document.getElementById("dia").innerHTML = `Avui és dia: ${fechaHoy}`;
 });
 
+    
+document.addEventListener("DOMContentLoaded",function(){
 
+    const userAgent = navigator.userAgent;
+    let browserName = "Navegador desconegut";
+    let browserVersion = "Versio desconeguda";
+
+    if (userAgent.indexOf("Firefox") > -1) {
+        browserName = "Mozilla Firefox";
+        browserVersion = userAgent.match(/Firefox\/(\d+\.\d+)/)[1];
+    } else if (userAgent.indexOf("Chrome") > -1 && userAgent.indexOf("Edg") === -1 && userAgent.indexOf("OPR") === -1) {
+        browserName = "Google Chrome";
+        browserVersion = userAgent.match(/Chrome\/(\d+\.\d+)/)[1];
+    } else if (userAgent.indexOf("Safari") > -1 && userAgent.indexOf("Chrome") === -1) {
+        browserName = "Apple Safari";
+        browserVersion = userAgent.match(/Version\/(\d+\.\d+)/)[1];
+    } else if (userAgent.indexOf("Edg") > -1) {
+        browserName = "Microsoft Edge";
+        browserVersion = userAgent.match(/Edg\/(\d+\.\d+)/)[1];
+    } else if (userAgent.indexOf("OPR") > -1) {
+        browserName = "Opera";
+        browserVersion = userAgent.match(/OPR\/(\d+\.\d+)/)[1];
+    }
+
+    document.getElementById("Navegador_nom").innerHTML = `<strong>Nom Navegador:</strong> ${browserName}`;
+    document.getElementById("Navegador_version").innerHTML = `<strong>Versión del Navegador:</strong> ${browserVersion}`;
+
+
+    var navInfo = window.navigator.appVersion.toLowerCase();
+    var so = 'Sistema Operativo';
+        if(navInfo.indexOf('win') != -1)
+        {
+            so = 'Windows';
+        }
+        else if(navInfo.indexOf('linux') != -1)
+        {
+            so = 'Linux';
+        }
+        else if(navInfo.indexOf('mac') != -1)
+        {
+            so = 'Mac';
+        }
+        
+    document.getElementById("Sistema").innerHTML = `<strong>Sistema operatiu:</strong> ${so}`;
+
+    document.getElementById("Ultima_modificacio").innerHTML = `<strong>Ultima Modificacio:</strong> ${document.lastModified}`;
+
+    document.getElementById("idioma").innerHTML = `<strong>Idioma:</strong> ${navigator.language}`;
+
+    document.getElementById("hostname").innerHTML = `<strong>Datos del Hostname (URL):</strong> ${window.location.href}`;
+
+});
 
