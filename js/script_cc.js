@@ -588,16 +588,10 @@ function goForward() {
     window.history.forward();  
 }
 
-document.getElementById('browser').textContent = navigator.appName;
-document.getElementById('browserVersion').textContent = navigator.appVersion;
+document.addEventListener("DOMContentLoaded", function() {
+    const fechaHoy = new Date().toLocaleDateString('es-ES'); // Formato dd/mm/yyyy
+    document.getElementById("dia").innerHTML = `Avui és dia: ${fechaHoy}`; // Agrega el texto y la fecha
+});
 
 
-document.getElementById('os').textContent = navigator.platform;
 
-
-document.getElementById('lastModified').textContent = document.lastModified;
-
-
-document.getElementById('language').textContent = navigator.language;
-
-document.getElementById('hostname').textContent = window.location.href;
