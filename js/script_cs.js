@@ -515,12 +515,11 @@ function Esborrar_un()
 }
 
 function goBack() {
-    window.history.back();  // Retrocede a la página anterior
+    window.history.back(); 
 }
 
-// Función para avanzar en el historial
 function goForward() {
-    window.history.forward();  // Avanza a la siguiente página en el historial
+    window.history.forward();  
 }
 
 

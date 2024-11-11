@@ -10,19 +10,18 @@ body {
 .container {
     margin-left: 25%;
     display: flex;
-    justify-content: center; /* Centra los elementos en la pantalla */
-    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+    justify-content: center; 
+    align-items: center; 
     padding: 20px;
     width: 50%;
-    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+    box-sizing: border-box; 
 }
 
 #calculadora {
-    flex: 1; /* Hace que la calculadora ocupe la mitad del espacio disponible */
-    margin-right: 10px; /* Espacio pequeño entre la calculadora y el contenedor de info */
+    flex: 1; 
+    margin-right: 10px; 
     padding-top: 20px;
-    margin-left: 50px; /* Añadido para que no esté pegada al borde izquierdo */
-     /* Limita el tamaño máximo de la calculadora */
+    margin-left: 50px; 
 }
 
 #calculadora table {
@@ -74,8 +73,8 @@ body {
 }
 
 .info-container {
-    flex: 1; /* Hace que el contenedor de la información ocupe la mitad restante del espacio */
-    margin-left: 10px; /* Espacio pequeño entre la calculadora y el contenedor de info */
+    flex: 1; 
+    margin-left: 10px; 
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 8px;
