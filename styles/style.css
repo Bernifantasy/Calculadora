@@ -63,23 +63,22 @@ body {
 }
 
 .input-field {
-    width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
-    padding: 10px; /* Espaciado interno */
-    font-size: 16px; /* Tamaño de la fuente */
-    box-sizing: border-box; /* Incluye el padding en el tamaño total del ancho */
-    border: 1px solid #ccc; /* Borde suave */
-    border-radius: 4px; /* Bordes redondeados */
+    width: 100%; 
+    padding: 10px; 
+    font-size: 16px; 
+    box-sizing: border-box; 
+    border: 1px solid #ccc; 
+    border-radius: 4px;
 }
 
 .login-input {
-    margin-bottom: 20px; /* Separación entre los campos */
+    margin-bottom: 20px;
 }
 
 .input-submit {
     text-align: center;
 }
 
-/* Media Query para Galaxy S20 Ultra (pantalla pequeña) */
 @media (max-width: 425px) {
     .login {
         width: 300px;
@@ -101,8 +100,6 @@ body {
         font-size: 14px;
     }
 }
-
-/* Media Query para iPad (pantalla más grande) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .login {
         width: 500px;
@@ -125,7 +122,6 @@ body {
     }
 }
 
-/* Media Query para dispositivos más grandes (por si es necesario) */
 @media (min-width: 1025px) {
     .login {
         width: 600px;

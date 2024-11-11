@@ -119,9 +119,6 @@ body {
     font-weight: bold;
 }
 
-/* Diseño responsivo para Samsung Galaxy S20 Ultra (pantallas grandes) y iPad */
-
-/* Para pantallas más grandes (tabletas, dispositivos de escritorio) */
 @media (min-width: 768px) {
     #calculadora {
         width: 60%;
@@ -150,7 +147,6 @@ body {
     }
 }
 
-/* Para pantallas más pequeñas (Samsung Galaxy S20 Ultra, teléfonos móviles) */
 @media (max-width: 767px) {
     #calculadora {
         width: 90%;
