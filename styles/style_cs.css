@@ -4,7 +4,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 0;    
+    margin: 0;
 }
 
 #calculadora {
@@ -74,26 +74,28 @@ body {
 }
 
 .boto_historial {
-    background-color: grey; 
-    border: none; 
-    color: white; 
-    font-size: 18px; 
+    background-color: grey;
+    border: none;
+    color: white;
+    font-size: 18px;
     font-weight: bold;
     width: 30px;
-    height: 30px; 
-    margin: 5px; 
-    border-radius: 5px; 
-    cursor: pointer; 
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 .container {
     text-align: center;
-    display:flex;
+    display: flex;
     padding: 20px 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .info-container {
-    
     flex: 1;
     margin: 20px;
     padding: 20px;
@@ -117,3 +119,78 @@ body {
     font-weight: bold;
 }
 
+/* Diseño responsivo para Samsung Galaxy S20 Ultra (pantallas grandes) y iPad */
+
+/* Para pantallas más grandes (tabletas, dispositivos de escritorio) */
+@media (min-width: 768px) {
+    #calculadora {
+        width: 60%;
+    }
+
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .info-container {
+        flex: 0 0 30%;
+        margin: 20px;
+    }
+
+    #menu {
+        justify-content: flex-start;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    #menu ul {
+        display: flex;
+    }
+}
+
+/* Para pantallas más pequeñas (Samsung Galaxy S20 Ultra, teléfonos móviles) */
+@media (max-width: 767px) {
+    #calculadora {
+        width: 90%;
+        height: auto;
+    }
+
+    #calculadora table {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .info-container {
+        flex: 1;
+        width: 80%;
+        margin: 10px;
+    }
+
+    #menu ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #menu ul li {
+        margin: 10px 0;
+    }
+
+    #menu ul li a {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .boto_historial {
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+    }
+}

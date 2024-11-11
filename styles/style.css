@@ -1,13 +1,13 @@
-body{
+body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#bbb8b8;
+    background-color: #bbb8b8;
     min-height: 100vh;
     margin: 0;
 }
 
-.login{
+.login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,21 +15,21 @@ body{
     width: 360px;
     height: 550px;
     padding: 20px;
-    
+    box-sizing: border-box;
 }
 
-.login-header{
+.login-header {
     text-align: center;
     margin: 20px 0 40px 0;
 }
 
-.login-header header{
+.login-header header {
     color: black;
     font-size: 30px;
     font-weight: 600;
 }
 
-.login-input .input-field{
+.login-input .input-field {
     width: 100%;
     height: 60px;
     font-size: 17px;
@@ -40,14 +40,14 @@ body{
     outline: none;
 }
 
-.input-submit{
+.input-submit {
     width: 30%;
     justify-content: flex-end;
     margin-left: auto;
     padding: 0;
 }
 
-.submit-button{
+.submit-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,22 +62,88 @@ body{
     color: white;
 }
 
-
 .input-field {
-    width: 100%;            /* Asegura que el campo ocupe todo el ancho disponible */
-    padding: 10px;          /* Espaciado interno */
-    font-size: 16px;        /* Tamaño de la fuente */
+    width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+    padding: 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
     box-sizing: border-box; /* Incluye el padding en el tamaño total del ancho */
     border: 1px solid #ccc; /* Borde suave */
-    border-radius: 4px;     /* Bordes redondeados */
+    border-radius: 4px; /* Bordes redondeados */
 }
 
 .login-input {
-    margin-bottom: 20px;  /* Separación entre los campos */
+    margin-bottom: 20px; /* Separación entre los campos */
 }
 
 .input-submit {
     text-align: center;
 }
 
+/* Media Query para Galaxy S20 Ultra (pantalla pequeña) */
+@media (max-width: 425px) {
+    .login {
+        width: 300px;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .login-header header {
+        font-size: 24px;
+    }
+    
+    .login-input .input-field {
+        height: 50px;
+        font-size: 14px;
+    }
+    
+    .submit-button {
+        height: 50px;
+        font-size: 14px;
+    }
+}
 
+/* Media Query para iPad (pantalla más grande) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .login {
+        width: 500px;
+        height: auto;
+        padding: 25px;
+    }
+    
+    .login-header header {
+        font-size: 36px;
+    }
+    
+    .login-input .input-field {
+        height: 70px;
+        font-size: 18px;
+    }
+    
+    .submit-button {
+        height: 70px;
+        font-size: 18px;
+    }
+}
+
+/* Media Query para dispositivos más grandes (por si es necesario) */
+@media (min-width: 1025px) {
+    .login {
+        width: 600px;
+        height: auto;
+        padding: 30px;
+    }
+    
+    .login-header header {
+        font-size: 40px;
+    }
+    
+    .login-input .input-field {
+        height: 80px;
+        font-size: 20px;
+    }
+    
+    .submit-button {
+        height: 80px;
+        font-size: 20px;
+    }
+}

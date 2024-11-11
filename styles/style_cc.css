@@ -4,45 +4,25 @@ body {
     margin: 0;    
     padding: 0;
     height: 100vh;
+    justify-content: center;
 }
 
 .container {
     margin-left: 25%;
-    text-align: center;
-    display:flex;
-    padding: 20px 0;
-}
-
-
-
-.info-container {
-    
-    flex: 1;
-    margin: 20px;
+    display: flex;
+    justify-content: center; /* Centra los elementos en la pantalla */
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
     padding: 20px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: Arial, sans-serif;
-}
-
-.info-container h2 {
-    text-align: center;
-    color: #333;
-}
-
-.info-container p {
-    font-size: 14px;
-    color: #555;
-}
-
-.info-container .label {
-    font-weight: bold;
+    width: 50%;
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
 }
 
 #calculadora {
-    flex: 2;
+    flex: 1; /* Hace que la calculadora ocupe la mitad del espacio disponible */
+    margin-right: 10px; /* Espacio pequeño entre la calculadora y el contenedor de info */
     padding-top: 20px;
+    margin-left: 50px; /* Añadido para que no esté pegada al borde izquierdo */
+     /* Limita el tamaño máximo de la calculadora */
 }
 
 #calculadora table {
@@ -89,9 +69,32 @@ body {
     background-color: rgb(169, 75, 75);
 }
 
-
 #calculadora button.operacio:hover {
     background-color: rgb(170, 56, 56);
+}
+
+.info-container {
+    flex: 1; /* Hace que el contenedor de la información ocupe la mitad restante del espacio */
+    margin-left: 10px; /* Espacio pequeño entre la calculadora y el contenedor de info */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+.info-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.info-container p {
+    font-size: 14px;
+    color: #555;
+}
+
+.info-container .label {
+    font-weight: bold;
 }
 
 #menu {
@@ -128,6 +131,25 @@ body {
     cursor: pointer; 
 }
 
-#dia{
+#dia {
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        margin-left: 0;
+        margin-left: 25%;
+    }
+
+    #calculadora {
+        margin-right: 0;
+        flex: 1;
+        width: 100%;
+    }
+
+    .info-container {
+        width: 100%;
+        margin-top: 20px;
+    }
 }
