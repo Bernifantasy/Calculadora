@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Calculadora Simple</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A brief page description">
+    <meta name="keywords" content="html,cheatsheet" />
+    <meta property="fb:admins" content="YourFacebookUsername" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="../styles/style_cs.css">
+<!-- Prepare for second course --> 
+    <script src="../js/script_cs.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<!-- If we use bootstrap
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ -->
+
+</head> 
+<body> 
+
+    <div id="menu">
+        <button class="boto_historial" onclick="goBack()">&lt;</button>
+        <button class="boto_historial" onclick="goForward()">&gt;</button>
+        <ul>
+            <li><a href="calculadora_simple.html">Calculadora Simple</a></li>
+            <li><a href="calculadora_cientifica.html">Calculadora Cientifica</a></li>
+            <li><a href="../index.html">Log Out</a></li>
+        </ul>
+    </div>
+    
+
+    <div class="container">
+        
+
+        <form id="calculadora">
+            <table>
+                <tr>
+                    <td colspan="4"><input type="text" disabled id="pantallaresultat"></td>
+                </tr>
+                <tr>
+                    <td><button type="button" id="borrar" class="operacio" onclick="Clear()">C</button></td>
+                    <td><button type="button" id="dividir" class="operacio" onclick="Dividir()">/</button></td>
+                    <td><button type="button" id="multiplicar" class="operacio" onclick="Multiplicar()">*</button></td>
+                    <td><button type="button" id="borar_individual" class="operacio" onclick="Esborrar_un()">&lt;-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="Tractar_Set()">7</button></td>
+                    <td><button type="button" onclick="Tractar_Vuit()">8</button></td>
+                    <td><button type="button" onclick="Tractar_Nou()">9</button></td>
+                    <td><button type="button" id="restar" class="operacio" onclick="Restar()">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="Tractar_Quatre()">4</button></td>
+                    <td><button type="button" onclick="Tractar_Cinc()">5</button></td>
+                    <td><button type="button" onclick="Tractar_Sis()">6</button></td>
+                    <td rowspan="2"><button type="button" id="sumar" class="operacio" onclick="Sumar()">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="Tractar_Un()">1</button></td>
+                    <td><button type="button" onclick="Tractar_Dos()">2</button></td>
+                    <td><button type="button" onclick="Tractar_Tres()">3</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" onclick="Tractar_Zero()">0</button></td>
+                    <td><button type="button" onclick="Tractar_Coma()">.</button></td>
+                    <td colspan="2"><button type="button" id="igual" class="operacio" onclick="Igual()">=</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <div class="info-container">
+            <h2>Información del Sistema</h2>
+            <p id="Navegador_nom"><span class="label"></span></p>
+            <p id="Navegador_version"><span class="label"></span></p>
+            <p id="Sistema"><span class="label"></span></p>
+            <p id="Ultima_modificacio"><span class="label"></span></p>
+            <p id="idioma"><span class="label"><span></p>
+            <p id="hostname"><span class="label"></span></p>
+        </div>
+    </div>
+</body> 
+</html> 
+

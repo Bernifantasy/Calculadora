@@ -1,0 +1,155 @@
+body {
+    background-color: #bbb8b8;
+    display: block;
+    margin: 0;    
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+}
+
+.container {
+    margin-left: 25%;
+    display: flex;
+    justify-content: center; /* Centra los elementos en la pantalla */
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box; /* Asegura que el padding no afecte al tamaño total */
+}
+
+#calculadora {
+    flex: 1; /* Hace que la calculadora ocupe la mitad del espacio disponible */
+    margin-right: 10px; /* Espacio pequeño entre la calculadora y el contenedor de info */
+    padding-top: 20px;
+    margin-left: 50px; /* Añadido para que no esté pegada al borde izquierdo */
+     /* Limita el tamaño máximo de la calculadora */
+}
+
+#calculadora table {
+    border-collapse: collapse;
+    height: 300px;
+}
+
+#calculadora button, #calculadora input {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    padding: 10px;
+}
+
+#calculadora input {
+    padding: 15px;
+    color: white;
+    border: none;
+    background-color: rgb(88, 82, 82);
+}
+
+#calculadora button {
+    background-color: grey;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#calculadora button:hover {
+    background-color: black;
+}
+
+#calculadora button.operacio {
+    background-color: red;
+}
+
+#calculadora button.operacio2{
+    background-color: rgb(237, 110, 110);
+}
+
+#calculadora button.operacio2:hover{
+    background-color: rgb(169, 75, 75);
+}
+
+#calculadora button.operacio:hover {
+    background-color: rgb(170, 56, 56);
+}
+
+.info-container {
+    flex: 1; /* Hace que el contenedor de la información ocupe la mitad restante del espacio */
+    margin-left: 10px; /* Espacio pequeño entre la calculadora y el contenedor de info */
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+.info-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.info-container p {
+    font-size: 14px;
+    color: #555;
+}
+
+.info-container .label {
+    font-weight: bold;
+}
+
+#menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#menu ul li a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+}
+
+.boto_historial {
+    background-color: grey; 
+    border: none; 
+    color: white; 
+    font-size: 18px; 
+    font-weight: bold;
+    width: 30px;
+    height: 30px; 
+    margin: 5px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+
+#dia {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; 
+        margin-left: 0;
+        margin-left: 25%;
+    }
+
+    #calculadora {
+        margin-right: 0;
+        flex: 1;
+        width: 100%;
+    }
+
+    .info-container {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
