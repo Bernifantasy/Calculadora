@@ -11,7 +11,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="styles/style.css">
 <!-- Prepare for second course --> 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
 <!-- If we use bootstrap
 
@@ -27,18 +27,20 @@
         <div class="login-header">
             <header>Login</header>
         </div>
-        <div class="login-input">
-            <input type="text" id="txtNom" class="input-field" required placeholder="Nom">
-        </div>
-        <div class="login-input">
-            <select id="txtTipus" class="input-field" required>
-                <option value="" disabled selected>Selecciona el tipus de calculadora</option>
-                <option value="simple">Simple</option>
-                <option value="cientifica">Científica</option>
-            </select>
-        <div class="input-submit">
-            <a href="html/calculadora_simple.html" class="submit-button">Entra</a>
-        </div>
+        <form id="loginForm">
+            <div class="login-input">
+                <input type="text" id="txtNom" class="input-field" required placeholder="Nom">
+            </div>
+            <div class="login-input">
+                <select id="txtTipus" class="input-field" required>
+                    <option value="" disabled selected>Selecciona el tipus de calculadora</option>
+                    <option value="simple">Simple</option>
+                    <option value="cientifica">Científica</option>
+                </select>
+            </div>
+            <div class="input-submit">
+                <input type="submit" class="submit-button" value="Entra">
+        </form>
     </div>
 
 
